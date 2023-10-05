@@ -93,7 +93,20 @@ public class App {
         do {
             System.out.println(contador);
             contador+=3;
-        } while (contador<2);
+        } while (contador<0);
 
+        System.out.println("+--------------- Arreglos bidimencionales ---------------+");
+        int [][][] matrizValores  = new int[2][3][2]; 
+        
+        contador = 0;
+        for (int i = 0; i < matrizValores.length; i++){
+            for (int j =0; j < matrizValores[0].length; j++){
+                for (int k =0; k < matrizValores[0][0].length; k++){
+                    matrizValores[i][j][k] = contador;
+                    contador +=2;
+                    System.out.println("En la pocisión " + i + ", " + j + ", " + k + " se almacenó el valor: " + matrizValores[i][j][k]);
+                }
+            }
+        }
     }
 }
