@@ -22,8 +22,13 @@ public class App {
         // Declaración de Variables
         String Mensaje = "";
         float Temperatura = 0.0F;
-        int opcion = 0;
+        int opcion = 0, contador = 0;
         Scanner cinput = new Scanner (System.in);
+            /* Creando Arreglos */
+            String [] NombresArray  = new String[3]; 
+            NombresArray[0] = "Maicol";
+            NombresArray[1] = "Duvan";
+            NombresArray[2] = "Dyland";
         
         System.out.println("Hello, World!");
         System.out.println("are you ready to start this program?");
@@ -37,6 +42,7 @@ public class App {
         System.out.print("Plis write a temperature value: ");
         Temperatura = cinput.nextFloat();     
         
+        System.out.println("+----------------- if -----------------+");
         if (Temperatura >= 50) {
             System.out.println("Temperatura sobrepasa el límite por " + (Temperatura - 50) + "°C");
         }   else if (Temperatura <= 15) {
@@ -45,6 +51,7 @@ public class App {
             System.out.println("Temperatura dentro de parámetros o límites aceptables.");
         }
         
+        System.out.println("+--------------- switch ---------------+");
         System.out.print("Plis write a number between 1 and 3: ");
         opcion = cinput.nextInt();
         switch (opcion){
@@ -61,6 +68,32 @@ public class App {
                 System.out.println("This option isn't in the options shows previously");
                 break;
         }
+        
+        System.out.println("+--------------- foreach ---------------+");
+        contador = 0;
+        for (String string : NombresArray) {
+            contador ++;
+            System.out.println("El nombre en la posición " + contador + " es " + string);
+        }
+
+        System.out.println("+----------------- for -----------------+");
+        for (int i = 0; i<=2;i++){
+            System.out.println(NombresArray[i]);
+        }
+
+        System.out.println("+---------------- while ----------------+");
+        contador = 0;
+        while (contador <= 5){
+            System.out.println(contador);
+            contador+=2;
+        }
+        
+        System.out.println("+--------------- do while ---------------+");
+        contador = 0;
+        do {
+            System.out.println(contador);
+            contador+=3;
+        } while (contador<2);
 
     }
 }
