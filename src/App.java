@@ -19,24 +19,16 @@ public class App {
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 
         // Declaramos variables
-        int LimMayor = 15, LimMenor = 0, NumIntentos = 0;
-        int NumAdivinar = 7, NumDigitado = 0;
+        String StudentName = "", Signature = "";
+        long [] Nota = new long[2], Porcentaje = new long[2];
 
-        do {
-            NumDigitado = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un número entre " + LimMenor + " y " + LimMayor));
-            NumIntentos++;
 
-            if (NumDigitado >= LimMenor  && NumDigitado <= LimMayor){
-                if (NumAdivinar == NumDigitado){
-                    JOptionPane.showMessageDialog(null, "Felicidades, el número digitado es el correcto, lo lograste en " + NumIntentos + " intentos");
-                } else if (NumAdivinar < NumDigitado) {
-                    JOptionPane.showMessageDialog(null, "El número digitado se emcuentra por encima del valor a adivinar.");
-                } else {
-                    JOptionPane.showMessageDialog(null, "El número digitado se encuentra por debajo del valor a adivinar.");
-                }
-            } else{
-                JOptionPane.showMessageDialog(null, "El número digitado no está dentro del intervalo de valores señalado, Ingrese un número entre " + LimMenor + " y " + LimMayor);
-            }
-        } while (NumDigitado != NumAdivinar);
+        JOptionPane.showMessageDialog(null, "¡Welcome! in this app each student can to managment your calificatios by assignature.");
+        StudentName = JOptionPane.showInputDialog(null, "Plis, write your full name");
+        Signature = JOptionPane.showInputDialog(null, "Now write the signatures name");
+        JOptionPane.showMessageDialog(null, "The name writed its " + StudentName + " and the signature writed its " + Signature);
+        
+        //Integer.parseInt(JOptionPane.showInputDialog("Ingrese un número entre " + LimMenor + " y " + LimMayor));
+        //JOptionPane.showMessageDialog(null, "Felicidades, el número digitado es el correcto, lo lograste en " + NumIntentos + " intentos");
     }
 }
