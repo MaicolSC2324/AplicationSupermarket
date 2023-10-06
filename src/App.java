@@ -95,7 +95,7 @@ public class App {
             contador+=3;
         } while (contador<0);
 
-        System.out.println("+--------------- Arreglos bidimencionales ---------------+");
+        System.out.println("+--------------- Arreglos superdimencionales ---------------+");
         int [][][] matrizValores  = new int[2][3][2]; 
         
         contador = 0;
