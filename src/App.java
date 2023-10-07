@@ -29,6 +29,7 @@ public class App {
         JOptionPane.showMessageDialog(null, "The name writed its " + StudentName + " and the signature writed its " + Signature);
         
         //Integer.parseInt(JOptionPane.showInputDialog("Ingrese un número entre " + LimMenor + " y " + LimMayor));
+        //hola
         //JOptionPane.showMessageDialog(null, "Felicidades, el número digitado es el correcto, lo lograste en " + NumIntentos + " intentos");
     }
 }
