@@ -20,7 +20,7 @@ public class App {
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 
         // Declaramos variables
-        String StudentName = "", Signature = "";
+        String StudentName = "", Signature = "", CadenaNotas = "";
         int LargoNotas = 0;
         double Calificacion = 0;
         
@@ -40,15 +40,12 @@ public class App {
 
             for (int i = 0; i < Porcentaje.length; i++) {
                 Calificacion = Calificacion + (Nota[i] * Porcentaje[i] / 100);
+                CadenaNotas = CadenaNotas + "\n"+ (i+1) + ". Calificación: " + Nota[i] + ", Porcentaje: " + Porcentaje[i];
             }
 
-            JOptionPane.showMessageDialog(null, "Listo " + StudentName + ", Para la asiganuta " + Signature + " tenemos el siguiente resultado \nLa calificación final de su asignatura es: " + Calificacion);
+            JOptionPane.showMessageDialog(null, "Listo " + StudentName + ", Para la asiganuta " + Signature + " tenemos el siguiente resultado:"+ CadenaNotas + "\nLa calificación final de su asignatura es: " + Calificacion);
 
         }
-        
-
-
-
         
         
         //Integer.parseInt(JOptionPane.showInputDialog("Ingrese un número entre " + LimMenor + " y " + LimMayor));
