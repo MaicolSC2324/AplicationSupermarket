@@ -40,5 +40,10 @@ public class MoldePokemon {
     public void setNumero(double numero){
         this.numero = numero;
     }
+
+    /* Métodos (Actividades) */
+    public String luchar(MoldePokemon PokemonRival, String Movimiento) {
+        return this.nombrePokemon +" ha atacado a " + PokemonRival.nombrePokemon + " con el movimiento " + Movimiento;
+    }
     
 }
